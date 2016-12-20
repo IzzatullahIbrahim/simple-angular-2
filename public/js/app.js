@@ -19,6 +19,10 @@ app.config([
             url:'/contact',
             templateUrl:'/templates/contact.html'
             })
+            .state('httpRequest',{
+            url:'/httpRequest',
+            templateUrl:'/templates/httpRequest.html'
+            })
     }
 ])
 
@@ -34,6 +38,8 @@ app.controller ('MyApp.HomeController',[
         // page and other objects or services.
         $scope.name = 'bob';
         $scope.age= 32;
+
+        $scope.nameList = ['susan', 'jane', 'larry', 'joe','frank']
 
         $scope.increaseAge = function () {
             console.log('increasing the Age');
